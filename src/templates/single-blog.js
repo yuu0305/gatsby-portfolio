@@ -12,8 +12,8 @@ const SingleBlog = (props) =>{
 
 export default SingleBlog
 export const query = graphql`
-query SingleBlogQuery {
-    markdownRemark {
+query SingleBlogQuery ($slug: String!){
+    markdownRemark(fields: {slug: {eq: $slug}}) {
       frontmatter {
         date
         ecerpt
