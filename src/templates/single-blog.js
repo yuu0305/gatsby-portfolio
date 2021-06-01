@@ -4,8 +4,9 @@ import { graphql } from "gatsby"
 const SingleBlog = (props) =>{
     return (
         <div>
-          <h1>記事ページ</h1>
-          {console.log(props)}
+          <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+          <p>{props.data.markdownRemark.frontmatter.date}</p>
+          <div dangerouslySetInnerHTML={{__html:props.data.markdownRemark.html}} />
         </div>
     )
 }
