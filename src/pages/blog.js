@@ -22,7 +22,7 @@ const Blog = (props) => {
 export default Blog
 export const query = graphql`
   query BlogQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___id, order: DESC}){
       edges {
         node {
           fields {
