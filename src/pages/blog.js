@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 const Blog = (props) => {
     // console.log(props)
@@ -10,6 +10,7 @@ const Blog = (props) => {
           {props.data.allMarkdownRemark.edges.map((singleBlog, index)=>
             // {console.log(singleBlog)}
             <div key={index}>
+              <Link  to={singleBlog.node.fields.slug}><h2>{singleBlog.node.frontmatter.title}</h2></Link>
               <h2>{singleBlog.node.frontmatter.title}</h2>
               <p>{singleBlog.node.frontmatter.date}</p>
             </div>
@@ -24,12 +25,15 @@ export const query = graphql`
     allMarkdownRemark {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             date
-            title
-            id
             ecerpt
+            id
             image
+            title
           }
         }
       }
