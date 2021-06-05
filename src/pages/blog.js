@@ -30,9 +30,8 @@ export const query = graphql`
           }
           frontmatter {
             date
-            ecerpt
+            excerpt
             id
-            image
             title
           }
         }

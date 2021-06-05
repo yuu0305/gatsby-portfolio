@@ -17,9 +17,8 @@ export const query = graphql`
     markdownRemark(fields: {slug: {eq: $slug}}) {
     frontmatter {
         date
-        ecerpt
+        excerpt
         id
-        image
         title
     }
     html
