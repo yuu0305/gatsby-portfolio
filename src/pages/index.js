@@ -1,13 +1,17 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+// import JSLogo from "../images/javascript.svg"
+// import ReactLogo from "../images/react.svg"
+// import GatsbyLogo from "../images/gatsby.svg"
+// import NextLogo from "../images/next.sng"
 
 const Index = () => {
   return(
     <>
     <div>
-      
-      <StaticImage src="../images/index-hero.jpg" alt="hero"/>
+
+      <StaticImage src="../images/index-hero.jpg" alt="hero" quality={90} placeholder="blurred" formats={["AUTO","WEBP","AVIF"]} />
       <div>
         <h1>I'm Yu Segawa!</h1>
         <h3>Developper js </h3>
@@ -20,6 +24,7 @@ const Index = () => {
           <h2>js nerd</h2>
           <p>pompom</p>
         </div>
+        <StaticImage src="../images/profile.jpg" alt="hero" quality={90} placeholder="blurred" formats={["AUTO","WEBP","AVIF"]} />
       </div>
 
       <div>
