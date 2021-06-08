@@ -5,12 +5,11 @@ import { StaticImage } from "gatsby-plugin-image"
 const Header = () => {
 
     return(
-      <>
       <header>
         <div>
             <div>
                 <Link to = "/">
-                    <StaticImage src="../image/logo.png" alt="logo" quality={90} placeholder="blurred" formats={["AUTO","WEBP","AVIF"]}  width={50} />
+                    <StaticImage src="../images/logo.png" alt="logo" quality={90} placeholder="blurred" formats={["AUTO","WEBP","AVIF"]}  width={50} />
                 </Link>
                 <ul>
                     <li><Link to="/blog">Blog</Link></li>
@@ -19,7 +18,6 @@ const Header = () => {
             </div>
         </div>
       </header>
-      </>
     )
 }
 
