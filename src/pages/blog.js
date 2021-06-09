@@ -2,13 +2,14 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import  Layout from "../components/layout"
+import * as style from "../styles/index.module.scss"
 
 const Blog = (props) => {
     // console.log(props)
     return(
       <Layout>
-      <div>
-        <div>
+      <div className={style.wrapper}>
+        <div className={style.container}>
           <h1>blog</h1>
             <p>WEB系エンジニアの日常をお届けします</p>
             {props.data.allMarkdownRemark.edges.map((singleBlog, index)=>

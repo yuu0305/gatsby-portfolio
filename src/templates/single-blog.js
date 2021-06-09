@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import  Layout from "../components/layout"
+import * as style from "../styles/index.module.scss"
 
 const SingleBlog = (props) =>{
     return (

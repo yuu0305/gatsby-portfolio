@@ -4,6 +4,7 @@ import github from "../images/github.svg"
 import linkdin from "../images/linkedin.svg"
 import twitter from "../images/twitter.svg"
 import facebook from "../images/facebook.svg"
+import * as style from "../styles/index.module.scss"
 
 const Footer = () => {
 
