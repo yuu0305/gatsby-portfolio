@@ -1,12 +1,12 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import  Layout from "../components/layout"
 
 const Blog = (props) => {
     // console.log(props)
-
     return(
-      <>
+      <Layout>
       <div>
         <div>
           <h1>blog</h1>
@@ -23,7 +23,7 @@ const Blog = (props) => {
             )}
         </div>
       </div>
-      </>
+      </Layout>
     )
 }
 

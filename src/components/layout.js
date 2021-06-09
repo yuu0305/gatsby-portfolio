@@ -2,10 +2,11 @@ import * as React from "react"
 import Header from "./header"
 import Footer from "./footer"
 
-const Layout = () => {
+const Layout = (props) => {
     return(
         <>
             <Header />
+            <main>{props.children}</main>
             <Footer />
         </>
     )
