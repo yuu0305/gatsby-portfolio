@@ -5,8 +5,8 @@ import * as style from "../styles/index.module.scss"
 const Contact = () => {
     return(
         <Layout>
-            <div>
-                <div>
+            <div className={style.wrapper}>
+                <div className={style.container}>
                     <h1>コンタクトページ</h1>
                     <p>お気軽にご連絡ください</p>
                     <form>
