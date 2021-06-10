@@ -14,7 +14,7 @@ const Blog = (props) => {
             <p>WEB系エンジニアの日常をお届けします</p>
             {props.data.allMarkdownRemark.edges.map((singleBlog, index)=>
               // {console.log(singleBlog)}
-              <div key={index}>
+              <div className={style.blogCard} key={index}>
                 <h3>{singleBlog.node.frontmatter.title}</h3>
                 <p>{singleBlog.node.frontmatter.excerpt}</p>
                 <p>{singleBlog.node.frontmatter.date}</p>
