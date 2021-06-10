@@ -6,9 +6,9 @@ import * as style from "../styles/index.module.scss"
 const Header = () => {
 
     return(
-      <header>
-        <div>
-            <div>
+      <header className={style.headerWrapper}>
+        <div className={style.container}>
+            <div className={style.flexContainer}>
                 <Link to = "/">
                     <StaticImage src="../images/logo.png" alt="logo" quality={90} placeholder="blurred" formats={["AUTO","WEBP","AVIF"]}  width={50} />
                 </Link>
