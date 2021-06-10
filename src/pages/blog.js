@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import  Layout from "../components/layout"
-import * as style from "../styles/index.module.scss"
+import * as style from "../styles/blog.module.scss"
 
 const Blog = (props) => {
     // console.log(props)
