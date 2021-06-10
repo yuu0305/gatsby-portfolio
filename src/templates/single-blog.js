@@ -7,13 +7,15 @@ import * as style from "../styles/index.module.scss"
 const SingleBlog = (props) =>{
     return (
         <Layout>
-        <div>
+        <div className={style.hero}>
             <GatsbyImage image={props.data.markdownRemark.frontmatter.image.childImageSharp.gatsbyImageData} alt="blog-image"/>
         </div>
-        <div>
-          <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-          <p>{props.data.markdownRemark.frontmatter.date}</p>
-          <div dangerouslySetInnerHTML={{__html:props.data.markdownRemark.html}} />
+        <div className={style.wrapper}>
+          <div className={style.container}>
+            <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+            <p>{props.data.markdownRemark.frontmatter.date}</p>
+            <div dangerouslySetInnerHTML={{__html:props.data.markdownRemark.html}} />
+          </div>
         </div>
         </Layout>
     )
