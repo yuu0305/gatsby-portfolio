@@ -9,7 +9,9 @@ const Contact = () => {
                 <div className={style.container}>
                     <h1>コンタクトページ</h1>
                     <p>お気軽にご連絡ください</p>
-                    <form>
+                    <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                        <input type="hidden" name="bot-field"/>
+                        <input type="hidden" name="form-name" value="contact"/>
                         <label htmlFor="name">お名前</label>
                         <input type="text" name="name" id="name" required />
                         <label htmlFor="email">メールアドレス</label>
