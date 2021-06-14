@@ -1,19 +1,20 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import  Layout from "../components/layout"
+import * as style from "../styles/blog.module.scss"
 
 const Blog = (props) => {
     // console.log(props)
-
     return(
-      <>
-      <div>
-        <div>
+      <Layout>
+      <div className={style.wrapper}>
+        <div className={style.container}>
           <h1>blog</h1>
             <p>WEB系エンジニアの日常をお届けします</p>
             {props.data.allMarkdownRemark.edges.map((singleBlog, index)=>
               // {console.log(singleBlog)}
-              <div key={index}>
+              <div className={style.blogCard} key={index}>
                 <h3>{singleBlog.node.frontmatter.title}</h3>
                 <p>{singleBlog.node.frontmatter.excerpt}</p>
                 <p>{singleBlog.node.frontmatter.date}</p>
@@ -23,7 +24,7 @@ const Blog = (props) => {
             )}
         </div>
       </div>
-      </>
+      </Layout>
     )
 }
 
